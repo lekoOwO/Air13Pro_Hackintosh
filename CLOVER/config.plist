@@ -30,20 +30,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X09TSQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WE9TSQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change EHC1 to EH01</string>
 					<key>Disabled</key>
 					<false/>
@@ -98,30 +84,12 @@
 					SU1FSQ==
 					</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change MEI to IMEI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					TUVJXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					SU1FSQ==
-					</data>
-				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
 		</dict>
 		<key>DropTables</key>
 		<array>
-			<dict>
-				<key>Signature</key>
-				<string>MCFG</string>
-			</dict>
 			<dict>
 				<key>Signature</key>
 				<string>DMAR</string>
@@ -131,12 +99,6 @@
 				<string>SSDT</string>
 				<key>TableId</key>
 				<string>CpuPm</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Ist</string>
 			</dict>
 		</array>
 		<key>HaltEnabler</key>
@@ -170,7 +132,6 @@
 			<string>SSDT-9.aml</string>
 			<string>SSDT-10.aml</string>
 			<string>SSDT-11.aml</string>
-			<string>SSDT-12.aml</string>
 			<string>SSDT-13.aml</string>
 			<string>SSDT-14.aml</string>
 			<string>SSDT-15.aml</string>
@@ -183,12 +144,14 @@
 			<string>SSDT-pr.aml</string>
 			<string>SSDT-PNLF.aml</string>
 			<string>ssdt-rmne.aml</string>
+			<string>SSDT-CC.aml</string>
+			<string>SSDT-NVME.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 darkwake=10 -lilubeta -alcbeta -igdvmtbeta -alcdhost brcmfx-country=#a</string>
+		<string>dart=0 darkwake=10 -lilubeta -alcbeta -igdvmtbeta -alcdhost brcmfx-country=#a abm_firstpolldelay=16000</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -231,9 +194,7 @@
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
-			<false/>
-			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>UseIntelHDMI</key>
 		<true/>
@@ -268,6 +229,10 @@
 				</dict>
 			</array>
 		</dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
@@ -390,6 +355,8 @@
 				<data>
 				AABJiY4iAQAAugAQAABIKQ==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -406,6 +373,8 @@
 				<data>
 				ibPwAgAAweAMBQAQAACJgw==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -422,6 +391,8 @@
 				<data>
 				AMeDpAAAAAAQAABIi0gISA==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -438,6 +409,8 @@
 				<data>
 				icGB4f8PAABIAdFIgfn/DwAAdzs=
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -449,7 +422,7 @@
 				<key>Comment</key>
 				<string>change 15 port limit to 26 in XHCI kext (100-Series-10.12)</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				g710////EA==
@@ -470,6 +443,8 @@
 				<data>
 				SYHF/w8AAEnB7QxJiwQkSA==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -486,6 +461,8 @@
 				<data>
 				Bf8PAABIwegMZvfB/w8PlQ==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -502,6 +479,8 @@
 				<data>
 				yAAAAEkp17gAEAAATYskJA==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -513,11 +492,13 @@
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>
 				AEFQUExFIFNTRAA=
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IOAHCIBlockStorage</string>
 				<key>Replace</key>
@@ -534,27 +515,13 @@
 				<data>
 				D7aMiIIAAACD+QwPhTIBAA==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
 				<data>
 				D7aMiIIAAACD+QkPhTIBAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>External icons patch</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				RXh0ZXJuYWw=
-				</data>
-				<key>Name</key>
-				<string>AppleAHCIPort</string>
-				<key>Replace</key>
-				<data>
-				SW50ZXJuYWw=
 				</data>
 			</dict>
 			<dict>
@@ -566,6 +533,8 @@
 				<data>
 				hv8PAABIwegMD7cPgeH/Dw==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -582,6 +551,8 @@
 				<data>
 				iWTY+EmBxAAQAABJgccA8A==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -598,6 +569,8 @@
 				<data>
 				4b+AQBUGTYnWugAQAABFMQ==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -615,28 +588,14 @@
 				BgIAAEyNuAAQAABMiflIgeEA8P//SYmGGgEAAEmJjiIB
 				AABBvAAQAABJKfQ=
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
 				<data>
 				BgIAAEyNuAACAABMiflIgeEA8P//SYmGGgEAAEmJjiIB
 				AABBvAACAABJKfQ=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AQAAdSU=
-				</data>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>
-				AQAA6yU=
 				</data>
 			</dict>
 			<dict>
@@ -648,6 +607,8 @@
 				<data>
 				weIIQQ+2wcHgDEQJ0EQJwA==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -664,6 +625,8 @@
 				<data>
 				RYTJD5XAD7bAweAMRAnYRA==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -680,6 +643,8 @@
 				<data>
 				SIXAdAeAiwgBAAAQ
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -714,6 +679,8 @@
 				</data>
 				<key>InfoPlistPatch</key>
 				<true/>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -730,6 +697,8 @@
 				<data>
 				SYnGTYX2dGFBwecMSWP/vg==
 				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
 				<key>Name</key>
 				<string>IONVMeFamily</string>
 				<key>Replace</key>
@@ -753,6 +722,42 @@
 				Qb4PAAAA60Q=
 				</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.12+-Second stage glitch</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQAAdSU=
+				</data>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA6yU=
+				</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>10.13+-Second stage glitch</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>
+				AQAAdSI=
+				</data>
+				<key>MatchOS</key>
+				<string>10.13.x</string>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>
+				AQAA6yI=
+				</data>
+			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>
@@ -761,12 +766,6 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>C0251540L5HGDVW1Q</string>
-		<key>ROM</key>
-		<data>
-		gJywQM0U
-		</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -780,8 +779,6 @@
 		<string>Mac-9AE82516C7C6B903</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string></string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -826,10 +823,6 @@
 		<string>0x1A</string>
 		<key>ProductName</key>
 		<string>MacBook9,1</string>
-		<key>SerialNumber</key>
-		<string></string>
-		<key>SmUUID</key>
-		<string></string>
 		<key>Trust</key>
 		<false/>
 		<key>Version</key>
@@ -837,8 +830,6 @@
 	</dict>
 	<key>SystemParameters</key>
 	<dict>
-		<key>CustomUUID</key>
-		<string></string>
 		<key>InjectKexts</key>
 		<string>Yes</string>
 		<key>InjectSystemID</key>

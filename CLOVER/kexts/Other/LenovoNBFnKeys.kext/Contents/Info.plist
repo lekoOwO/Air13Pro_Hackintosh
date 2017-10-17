@@ -68,7 +68,7 @@
 				<key>DimBacklightOnAC/DC</key>
 				<true/>
 				<key>DimBrightnessByLevels</key>
-				<integer>3</integer>
+				<integer>2</integer>
 				<key>DimBrightnessThreshold</key>
 				<integer>1</integer>
 				<key>DisableBluetoothAtBoot</key>
@@ -78,9 +78,9 @@
 				<key>DualFunctionKeysConfig</key>
 				<integer>7</integer>
 				<key>FinerBrightnessControl</key>
-				<true/>
-				<key>MakeFnKeysAsFunction</key>
 				<false/>
+				<key>MakeFnKeysAsFunction</key>
+				<true/>
 			</dict>
 		</dict>
 	</dict>
